@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nieta</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="shortcut icon" href="imagem/principal.jpg" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inclui o Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("O82xk317ejttox0Nt");
+      })();
+    </script>
+  </head>
+  <body>
+    <nav class="fixed">
+      <img src="imagem/logo-4.0.png" alt="" class="titulo-menu" />
+      <a href="login.html"
+        ><button
+          class="px-5 py-2 w-54 text-white font-semibold text-lg bg-[#1f2937] rounded-lg transition duration-300 transform hover:bg-[rgb(255,123,0)] hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[rgb(255,123,0)] mt-3 mr-10"
+        >
+          Baixe o Jogo
+        </button></a
+      >
+    </nav>
+    <header class="topo h-screen">
+      <h2 class="font-bold text-5xl text-white text-shadow-2xs">
+        Salve Nieta!
+      </h2>
+      <p>
+        Venha desbravar as terras distantes de Nieta e se aprofundar neste mundo
+      </p>
+      <a href="login.html">
+        <button
+          class="px-8 py-4 text-white font-semibold text-xl bg-[#1f2937] rounded-lg transition duration-300 transform hover:bg-[rgb(255,123,0)] hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[rgb(255,123,0)] mt-3"
+        >
+          Baixar o Jogo
+        </button>
+      </a>
+    </header>
+    <main>
+      <article>
+        <!-- Personagem 1 -->
+        <div class="card" style="width: 400px; height: 300px">
+          <div class="card-body flex items-center flex-col">
+            <h5 class="card-title text-2xl font-bold text-center">Rei Arval</h5>
+            <p class="card-text text-center">
+              Cego pela própria ambição, o Rei Arval não hesitou em trocar os
+              bens mais preciosos da vila Nieta por riquezas e poder que apenas
+              ele desfrutaria.
+            </p>
+            <button
+              href="#"
+              class="btn btn-primary mt-3 text-center"
+              style="background-color: #1f2937; margin-top: 90px"
+              data-bs-target="#modalRei"
+              data-bs-toggle="modal"
+              id="btn"
+            >
+              Saiba mais
+            </button>
+          </div>
+        </div>
+        <!-- Personagem 2 -->
+        <div class="card" style="width: 400px; height: 300px">
+          <div class="card-body flex items-center flex-col">
+            <h5 class="card-title text-2xl font-bold text-center">Agatha</h5>
+            <p class="card-text text-center">
+              Desde criança, Agatha cresceu ouvindo histórias sobre o pacto
+              sombrio que amarra sua vila ao rei tirano. Um acordo feito às
+              escondidas, onde todos os recursos e a prosperidade do povo são
+              sacrificados para alimentar a ganância de um monarca que nada
+              valoriza além de seu próprio poder.
+            </p>
+            <button
+              href="#"
+              class="btn btn-primary mt-3"
+              style="background-color: #1f2937"
+              data-bs-target="#modalAgatha"
+              data-bs-toggle="modal"
+              id="btn"
+            >
+              Saiba mais
+            </button>
+          </div>
+        </div>
+        <!-- Personagem 3 -->
+        <div class="card" style="width: 400px; height: 300px">
+          <div class="card-body flex items-center flex-col">
+            <h5 class="card-title text-2xl font-bold text-center">Sr Rock</h5>
+            <p class="card-text text-center">
+              Velho e experiente, Sr. Rock é a voz da sabedoria na jornada de
+              Agatha. Com seu conhecimento das antigas tradições e táticas de
+              batalha, ele guia e protege a jovem guerreira, ajudando-a a
+              desvendar os segredos do pacto e a fortalecer sua determinação.
+              Fiel à vila, ele é um pilar de apoio indispensável na luta pela
+              liberdade.
+            </p>
+            <button
+              href="#"
+              class="btn btn-primary mt-3"
+              style="background-color: #1f2937"
+              id="btn"
+              data-bs-target="#modalRock"
+              data-bs-toggle="modal"
+            >
+              Saiba mais
+            </button>
+          </div>
+        </div>
+      </article>
+      <section class="fases-game">
+        <h2 class="text-4xl font-bold mb-3">Fases do jogo</h2>
+        <div class="carousel-fase duration-300">
+          <div
+            id="carouselExample"
+            class="carousel slide"
+            style="transition: 0.5s"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="imagem/fundo-fase1.jpeg"
+                  class="d-block"
+                  alt="..."
+                  height="300px"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="imagem/Fase 2.png"
+                  class="d-block"
+                  alt="..."
+                  height="300px"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="imagem/fase3.png"
+                  class="d-block"
+                  alt="..."
+                  height="300px"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="imagem/fase4.png"
+                  class="d-block"
+                  alt="..."
+                  height="300px"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Próxima</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <aside class="flex justify-center items-center text-white flex-col p-10">
+        <h2 class="text-3xl font-bold mb-3">Opiniões de usuários</h2>
+        <div>
+          <div class="border-2 p-3 border-[#1e3a8a] rounded-lg mb-3 mt-3">
+            <p>
+              “Achei incrível o que vocês fizeram! É nítido o esforço e o
+              carinho em cada detalhe. A jogabilidade é simples, mas divertida,
+              e gostei muito da trilha sonora, deixou tudo mais envolvente.
+              Claro que ainda tem algumas coisinhas para melhorar, como a
+              movimentação que às vezes parece travar, mas considerando que foi
+              feito por apenas quatro estudantes, tá de parabéns! Continuem
+              nesse caminho.”
+            </p>
+            <p class="text-base font-bold mt-3">Mariana Lopes</p>
+            <p>mariana.lopes92@gmail.com</p>
+          </div>
+          <div class="border-2 p-3 border-[#1e3a8a] rounded-lg mb-3 mt-3">
+            <p>
+              “Eu jogo bastante indie game e fiquei bem surpreso com o trabalho
+              de vocês. A arte tem identidade, o menu é funcional e o jogo roda
+              bem. Só senti falta de um tutorial inicial mais explicativo,
+              porque nos primeiros minutos fiquei meio perdido. No mais, gostei
+              muito. Se lançarem atualizações, com certeza vou querer testar de
+              novo.”
+            </p>
+            <p class="text-base font-bold mt-3">Thiago Souza</p>
+            <p>thiago.souza.dev@hotmail.com</p>
+          </div>
+          <div class="border-2 p-3 border-[#1e3a8a] rounded-lg mb-3 mt-3">
+            <p>
+              “Gostei da proposta! O jogo é leve, divertido e tem aquele ‘toque
+              estudante’ que passa uma energia muito boa. Claro, tem bugs aqui e
+              ali (meu personagem caiu do mapa duas vezes rs), mas não vejo isso
+              como algo ruim, pelo contrário, mostra que vocês ainda estão em
+              fase de aprendizado e já conseguem entregar algo jogável. Mandaram
+              bem demais!”
+            </p>
+            <p class="text-base font-bold mt-3">Ana Paula</p>
+            <p>ana.paula1981@gmail.com</p>
+          </div>
+          <div class="border-2 p-3 border-[#1e3a8a] rounded-lg mb-3 mt-3">
+            <p>
+              “Confesso que comecei a jogar sem muita expectativa, mas acabei me
+              surpreendendo. O jogo prende! Dá pra ver que teve esforço de
+              equipe na construção. Gostei da mecânica principal, mas acho que
+              vocês poderiam trabalhar mais a parte de desafios, porque depois
+              de um tempo ficou um pouco repetitivo. No geral, adorei a
+              iniciativa e espero ver a evolução de vocês.”
+            </p>
+            <p class="text-base font-bold mt-3">Carlos Henrique</p>
+            <p>carlos.henrique1995@gmail.com</p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-center gap-4 p-6 bg-gray-900 rounded-2xl shadow-lg w-80"
+        >
+          <h2 class="text-xl font-bold text-white">Envie sua opinião</h2>
+          <button
+            class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition hover:scale-105"
+            data-bs-target="#modalOpiniao"
+            data-bs-toggle="modal"
+          >
+            Clique aqui
+          </button>
+        </div>
+      </aside>
+      -
+      <section class="cutscene-nieta">
+        <div class="text-left">
+          <h2 class="text-5xl font-bold text-center mb-3">
+            Entre Cinzas e Promessas
+          </h2>
+          <p class="text-lg text-center">
+            O rei vendeu o coração do povo por promessas vazias. Das chamas, uma
+            única alma se ergueu. Agatha carrega a verdade que o fogo tentou
+            apagar.
+          </p>
+        </div>
+        <div class="video-container">
+          <video autoplay muted loop playsinline>
+            <source src="videos/Cutscene.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeos.
+          </video>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <h2 class="text-3xl font-bold">Quem somos</h2>
+      <p class="text-inicio">
+        Somos uma equipe apaixonada por jogos e histórias épicas. Nosso objetivo
+        é criar uma experiência inesquecível em Nieta, onde cada fase é uma
+        jornada mágica cheia de surpresas, desafios e lendas.
+      </p>
+      <div class="devs">
+        <div class="dev1">
+          <div class="foto1"></div>
+          <div class="flex-none justify-center itens-center">
+            <h2 class="text-3xl font-bold ml-6">Flávio Inocêncio</h2>
+            <p class="ml-9 mt-1">flavio.coelho@etec.sp.gov.br</p>
+            <p class="ml-20 mt-1">Desenvolvedor do site</p>
+          </div>
+        </div>
+        <div class="dev">
+          <div class="foto2"></div>
+          <div class="flex flex-col justify-center">
+            <h2 class="text-3xl font-bold w-64 ml-8">Henrique Campos</h2>
+            <p class="mt-1 ml-9 mr-3">henrique.campos35@etec.sp.gov.br</p>
+            <p class="ml-24 mt-1">Desenvolvedor A do jogo</p>
+          </div>
+        </div>
+        <div id="dev">
+          <div class="foto-pronta"></div>
+          <div class="texto">
+            <h2 class="text-3xl font-bold ml-6">Bruno Barros</h2>
+            <p class="mt-1 ml-9 mr-3">bruno.barros01@etec.sp.gov.br</p>
+            <p class="ml-20 mt-1">Artista e Scrum Master</p>
+          </div>
+        </div>
+        <div id="dev4">
+          <div class="foto-pronta1"></div>
+          <div class="texto">
+            <h2 class="text-3xl font-bold ml-6">Gabriel Barboza</h2>
+            <p class="mt-1 ml-9 mr-3">gabriel.palmieri01@etec.sp.gov.br</p>
+            <p class="ml-20 mt-1">Desenvolvedor B do jogo</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MODAL -->
+    <!-- Modal personagem 1 -->
+    <div class="modal" tabindex="-1" id="modalRei">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Rei Arval</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Muito antes dos tempos de Agatha, a Vila Nieta era um lugar
+              fértil, repleto de vida, águas límpidas e campos dourados. Seus
+              habitantes viviam em harmonia com a terra, cultivando mais do que
+              precisavam e compartilhando tudo entre si. Mas esse equilíbrio
+              começou a ruir com a chegada de Arval, um jovem nobre enviado
+              pelos altos reinos para governar a vila não como protetor, mas
+              como senhor.
+            </p>
+            <p>
+              Arval era ambicioso. Enquanto o povo se contentava com o
+              necessário, ele sonhava com luxo, castelos de mármore, vinho raro
+              e reconhecimento entre os reis do continente. Mas Nieta não era
+              rica o bastante para seus desejos... até que ele ouviu falar da
+              Entidade do Abismo, um demônio antigo que oferecia riqueza em
+              troca de poder sobre as terras e almas dos homens.
+            </p>
+            <p>
+              Na calada da noite, Arval entrou nas ruínas proibidas no coração
+              da floresta sagrada. Lá, selou um pacto sombrio: em troca de bens
+              infinitos, ouro, poder e uma vida sem envelhecer, entregaria ao
+              demônio o direito sobre tudo que a vila produzisse da colheita ao
+              sangue. O contrato foi feito em silêncio, sem que o povo soubesse.
+            </p>
+            <p>
+              No dia seguinte, chuvas de prata caíram do céu. Os celeiros se
+              encheram. O castelo foi erguido da terra em um único dia. Arval se
+              autoproclamou Rei de Nieta, e por anos, viveu como um deus entre
+              mortais. Mas a vila pagava o preço: suas colheitas apodreciam
+              antes da colheita, doenças surgiram, crianças desapareciam na
+              noite e ninguém conseguia sair das fronteiras.
+            </p>
+            <p>
+              A terra estava amaldiçoada e o rei, enfeitiçado pelo pacto, já não
+              era mais humano. Seus olhos brilhavam como brasas, e sua voz
+              carregava o eco do próprio demônio.
+            </p>
+            <p>
+              Agora, décadas depois, a vila está à beira do colapso. Mas surge
+              Agatha, a única disposta a quebrar o ciclo de miséria. Para isso,
+              ela terá que enfrentar Arval não apenas como rei, mas como o servo
+              sombrio do inferno que ele próprio escolheu se tornar.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal personagem 2 -->
+    <div class="modal" tabindex="-1" id="modalAgatha">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Agatha</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="imagem/agatha.jpeg" alt="" />
+            <p>
+              Agatha nasceu em tempos escuros, quando a Vila Nieta já vivia sob
+              a sombra do pacto maldito feito por Rei Arval. Desde pequena,
+              ouviu sussurros de que a terra já fora viva e alegre, que o rio
+              era azul e os campos cantavam com o vento. Mas tudo o que ela
+              conhecia era o silêncio das colheitas secas, a tristeza nos olhos
+              dos anciãos e os desaparecimentos que ninguém ousava comentar.
+            </p>
+            <p>
+              Criada por sua avó, uma curandeira esquecida nas bordas da vila,
+              Agatha aprendeu a ouvir não apenas com os ouvidos, mas com o
+              coração. Ela escutava a dor da terra, o lamento das raízes, e o
+              choro das mães que nunca encontraram seus filhos. Mais do que
+              tudo, ela sentia que algo estava profundamente errado. E ninguém
+              fazia nada.
+            </p>
+            <p>
+              Certa noite, vasculhando antigos escritos escondidos sob o altar
+              da velha igreja, Agatha descobriu a verdade: Rei Arval havia
+              vendido a alma da vila em troca de riqueza pessoal, selando um
+              pacto com uma entidade demoníaca que agora corrompia tudo ao
+              redor. Foi ali que ela jurou que não seria mais apenas uma
+              espectadora da decadência. Ela se tornaria a ruptura.
+            </p>
+            <p>
+              Treinada em segredo por Sr. Rock, o último dos guardiões
+              silenciosos da vila, Agatha desenvolveu coragem, força e clareza.
+              Mas seu maior poder não veio da espada ou da magia e sim da fé no
+              povo e no futuro. Ela acredita que é possível quebrar o pacto,
+              mesmo que isso exija sacrifícios que ninguém mais esteja disposto
+              a fazer.
+            </p>
+            <p>
+              Agora, com o coração ardendo como o fogo da liberdade, Agatha
+              parte em uma jornada para libertar sua vila, enfrentar Arval e
+              encarar o próprio demônio se for preciso.
+            </p>
+            <p>Ela não luta por glória. Ela luta por justiça.</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal personagem 3 -->
+    <div class="modal" tabindex="-1" id="modalRock">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Sr Rock</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Antes de ser chamado de Sr. Rock, ele era apenas Kael Rocan, um
+              dos muitos jovens que sonhavam em proteger a Vila Nieta. Era um
+              guerreiro disciplinado, mas também um estudioso das tradições
+              esquecidas, alguém que acreditava que a força bruta nunca deveria
+              se sobrepor à verdade.
+            </p>
+            <p>
+              Foi um dos poucos que presenciou a mudança. Ele viu com os
+              próprios olhos o momento em que Arval deixou de ser um homem e
+              passou a servir algo muito mais sombrio. Tentou alertar os outros.
+              Tentou resistir. Mas ninguém acreditou. E aqueles que
+              acreditaram... desapareceram.
+            </p>
+            <p>
+              Para proteger o pouco que restava, Kael se ocultou. Abandonou o
+              nome. Passou a ser chamado apenas de Sr. Rock um velho recluso,
+              considerado louco por alguns, invisível para a maioria. Mas
+              enquanto a vila mergulhava na escuridão, ele observava, estudava,
+              e esperava.
+            </p>
+            <p>
+              Esperava por alguém que fosse diferente. Alguém que ainda ouvisse
+              a voz da terra. Alguém como Agatha.
+            </p>
+            <p>
+              Quando ela veio até ele, ainda adolescente, com os olhos cheios de
+              perguntas e o espírito cheio de raiva e esperança, Rock soube que
+              a espera havia acabado. Tornou-se seu mestre, mentor e protetor.
+              Ensinou-lhe a verdade sobre o pacto, sobre o rei e sobre os
+              perigos além do véu visível. Mas, acima de tudo, ensinou-a a
+              duvidar, questionar e resistir.
+            </p>
+            <p>
+              Embora os anos tenham pesado sobre seus ombros, Sr. Rock mantém
+              uma chama viva no olhar a mesma que viu apagar-se em tantos
+              outros. Agora, ao lado de Agatha, ele luta não por glória, nem por
+              vingança… Mas para cumprir uma promessa feita há décadas: que a
+              vila voltaria a respirar livre.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal para a opiniao -->
+    <div class="modal" tabindex="-1" id="modalOpiniao">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Opinião - Usuário</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h2 class="text-2xl font-bold text-center mb-4">
+              Escreva sua opinião
+            </h2>
+            <form
+              id="formOpiniao"
+              class="flex justify-center items-center flex-wrap flex-col"
+            >
+              <textarea
+                name="opiniao"
+                id="iopn"
+                placeholder="Digite aqui..."
+                class="border border-black rounded-lg mb-3"
+                style="
+                  height: 400px;
+                  width: 450px;
+                  border-color: rgba(0, 0, 0, 0.497);
+                  padding: 10px;
+                "
+              >
+              </textarea>
+              <button
+                type="submit"
+                class="px-5 py-1 w-54 text-white font-semibold text-lg bg-[#1f2937] rounded-lg transition duration-300 transform hover:bg-[rgb(255,123,0)] hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[rgb(255,123,0)] mt-3"
+              >
+                Enviar
+              </button>
+              <p id="status" class="mt-3"></p>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="px-3 py-2 w-54 text-white font-semibold text-lg bg-red-500 rounded-lg transition duration-300 transform hover:bg-red-600 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[rgb(255,123,0)] mt-3 mr-10"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Pegamos o formulário de opinião do usuário pelo ID
+      document
+        .getElementById("formOpiniao")
+        .addEventListener("submit", function (e) {
+          // Garantimos que o formulário seja enviado em método POST
+          e.preventDefault();
+
+          const opiniao = document.getElementById("iopn").value; // Texto do usuario
+          const status = document.getElementById("status"); // Mensagem de erro
+
+          status.innerText = "Enviando opinião..."; // Enquanto ta enviando a msg fica assim
+          status.style.color = "yellow";
+          if (!opiniao) {
+            status.innerText = "Insira uma opinião!"; // Se a opn estiver vazia, msg de erro
+            status.style.color = "red";
+          }
+          const templateParams = {
+            user_message: opiniao, // Mensagem do usuario
+            to_email: "flavio2010sjcc@gmail.com", // Email q a opn vai chegar
+          };
+          emailjs
+            .send("service_hilnkgm", "template_0mdsx0q", templateParams) // Service_id, template_id e o obj com os dados
+            .then(
+              function (response) {
+                status.innerText = "Opinião enviada com sucesso!"; // A opn foi enviada
+                status.style.color = "green";
+              },
+              function (error) {
+                status.innerText = "Ocorreu um erro!"; // Algm erro no envio
+                console.error(error); // Envia a mensagem de erro ao console
+              }
+            );
+        });
+    </script>
+  </body>
+</html>

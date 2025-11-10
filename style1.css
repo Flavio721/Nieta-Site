@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(imagem/topo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img-logo{
+    height: 80px;
+    margin-bottom: 20px;
+}
+.form{
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 500px;
+    width: 500px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #273344;
+    color: white;
+    flex-flow: column;
+    gap: 20px;
+}
+.form form{
+    display: flex;
+    flex-flow: column;
+    width: 400px;
+    gap: 20px;
+}
+.form-control{
+    background-color: #3e506b;
+    border: 1px solid #3e506b;
+    padding-left: 30px;
+    color: white;
+}
+.form-control::placeholder{
+    color: white;
+}
+.form-control:focus{
+    background-color: #4a6183;
+}
+.form-control:read-write{
+    color: white;
+}
+.btn-enviar {
+  background-color: #3e506b;
+  color: white;
+  font-size: 18px;
+  border: 1px solid #3e506b;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px;
+  width: 100px;
+  margin: auto;
+}
+.btn-enviar:hover {
+  scale: 1.1;
+  background-color: #4a6183;
+  color: white;
+}
+.form-login{
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 500px;
+    width: 500px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #273344;
+    color: white;
+    gap: 10px;
+    flex-flow: column;
+}
+.form-login h2{
+    margin-top: 30px;
+}
+.form-login form{
+    display: flex;
+    flex-flow: column;
+    width: 400px;
+    gap: 20px;
+    margin-top: 20px;
+}
+#status{
+    margin: auto;
+    font-size: 1.1em;
+}
+.imagem-login{
+    height: 100px;
+    margin-top: 10px;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="shortcut icon" href="imagem/principal.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style1.css" />
+    <title>Cadastro - Nieta</title>
+  </head>
+  <body>
+    <main>
+      <div class="form">
+        <img src="imagem/logo-3.0.png" alt="" class="img-logo" />
+        <h2>Fazer cadastro</h2>
+        <form id="formLogin">
+          <div
+            class="input-container"
+            style="position: relative; display: inline-block"
+          >
+            <i
+              class="bi bi-person"
+              style="
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: gray;
+              "
+            ></i>
+            <input
+              type="text"
+              id="inome"
+              placeholder="Digite seu nome"
+              style="padding-left: 30px"
+              class="form-control"
+            />
+          </div>
+
+          <div
+            class="input-container"
+            style="position: relative; display: inline-block"
+          >
+            <i
+              class="bi bi-envelope"
+              style="
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: gray;
+              "
+            ></i>
+            <input
+              type="email"
+              name="email"
+              id="iemail"
+              class="form-control"
+              placeholder="E-mail"
+              style="padding-left: 30px"
+            />
+          </div>
+
+          <div
+            class="input-container"
+            style="position: relative; display: inline-block"
+          >
+            <i
+              class="bi bi-lock"
+              style="
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: gray;
+              "
+            ></i>
+            <input
+              type="password"
+              name="senha"
+              id="isenha"
+              class="form-control"
+              placeholder="Senha"
+              style="padding-left: 30px"
+            />
+          </div>
+
+          <button id="btnEnviar" type="submit" class="btn-enviar">
+            Enviar
+          </button>
+        </form>
+        <p id="status"></p>
+      </div>
+    </main>
+  </body>
+  <script>
+    document
+      .getElementById("formLogin")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const nome = document.getElementById("inome").value.trim();
+        const email = document.getElementById("iemail").value.trim();
+        const senha = document.getElementById("isenha").value.trim();
+        const status = document.getElementById("status");
+
+        if (!nome || !email || !senha) {
+          alert("Preencha todos os campos");
+          return;
+        }
+
+        const formData = new FormData();
+        formData.append("nome", nome);
+        formData.append("email", email);
+        formData.append("senha", senha);
+
+        fetch("scripts/cadastro.php", {
+          method: "POST",
+          body: formData,
+        })
+          .then((resposta) => resposta.text())
+          .then((text) => {
+            if (text.trim() === "Sucesso") {
+              alert("Cadastro efetuado, confirme seu email e senha");
+              window.location.href = "login.html";
+            } else {
+              status.innerText = "Email ou senha já cadastrado";
+              status.style.color = "red";
+              console.log("Erro: ", text);
+            }
+          });
+      });
+  </script>
+</html>
