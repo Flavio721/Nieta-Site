@@ -254,6 +254,7 @@ footer p {
   body {
     width: 100%;
     overflow-x: hidden;
+    height: 100%;
   }
   nav {
     justify-content: center;
