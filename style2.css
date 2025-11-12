@@ -253,6 +253,7 @@ footer p {
 @media screen and (max-width: 768px) {
   body {
     width: 100%;
+    overflow-x: hidden;
   }
   nav {
     justify-content: center;
