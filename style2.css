@@ -280,10 +280,11 @@ footer p {
   }
   article {
     height: 1000px !important;
+    width: 100vw;
   }
   .fases-game {
     height: 100px;
-    width: 100%;
+    width: 100vw;
     align-items: center;
   }
   .fases-game .carousel-fase {
@@ -293,6 +294,7 @@ footer p {
   }
   aside {
     background-color: #1f2937;
+    width: 100vw;
   }
   .cutscene-nieta {
     display: none;
