@@ -281,11 +281,13 @@ footer p {
   article {
     height: 1000px !important;
     width: 100vw;
+    background-color: orange;
   }
   .fases-game {
     height: 100px;
     width: 100vw;
     align-items: center;
+    background-color: blue;
   }
   .fases-game .carousel-fase {
     margin-right: 35px;
@@ -293,7 +295,7 @@ footer p {
     width: 90%;
   }
   aside {
-    background-color: #1f2937;
+    background-color: red;
     width: 100vw;
   }
   .cutscene-nieta {
@@ -303,7 +305,7 @@ footer p {
     height: 800px;
     padding-bottom: 1000px;
     width: 100vw;
-    background-color: #344359;
+    background-color: green;
   }
   footer .dev,
   .dev1,
