@@ -258,7 +258,9 @@ footer p {
   }
   nav {
     justify-content: center;
-    width: 100%;
+  }
+  nav .titulo-menu{
+    margin-right: 50px;
   }
   nav a{
     display: none;
