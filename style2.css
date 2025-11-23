@@ -281,13 +281,11 @@ footer p {
   article {
     height: 1000px !important;
     width: 100vw;
-    background-color: orange;
   }
   .fases-game {
     height: 100px;
     width: 100vw;
     align-items: center;
-    background-color: blue;
   }
   .fases-game .carousel-fase {
     margin-right: 35px;
@@ -295,7 +293,7 @@ footer p {
     width: 90%;
   }
   aside {
-    background-color: red;
+    background-color: #1f2937;
     width: 100vw;
   }
   .cutscene-nieta {
@@ -305,7 +303,7 @@ footer p {
     height: 800px;
     padding-bottom: 1000px;
     width: 100vw;
-    background-color: green;
+    background-color: #344359;
   }
   footer .dev,
   .dev1,
@@ -325,13 +323,15 @@ footer p {
   }
   footer #dev4 {
     grid-row: 3;
-    width: 420px !important;
+    width: 400px !important;
     margin-left: 30px;
+    background-color: red;
   }
   footer .dev {
     grid-row: 4;
     width: 420px !important;
     margin-left: 30px;
+    background-color: orange;
   }
 
   footer .text-inicio {
