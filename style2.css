@@ -260,27 +260,33 @@ footer p {
     justify-content: center;
     width: 100%;
   }
+  nav a{
+    display: none;
+  }
   main {
     width: 100vw;
+  }
+  .card{
+    width: 80% !important;
+    height: 350px !important;
+    margin-top: 20px;
   }
   .baixar {
     justify-self: center;
     margin-left: 0px;
   }
-  .carousel-fase {
-    height: 100px;
-    margin-bottom: 200px;
-  }
   article {
-    height: 1000px;
+    height: 1000px !important;
   }
   .fases-game {
-    height: 600px;
+    height: 100px;
+    width: 100%;
     align-items: center;
   }
   .fases-game .carousel-fase {
     margin-right: 35px;
     margin-top: 20px;
+    width: 90%;
   }
   aside {
     background-color: #1f2937;
@@ -302,17 +308,23 @@ footer p {
   }
   footer .dev1 {
     grid-row: 1;
-    width: 450px;
+    width: 400px !important;
+    margin-left: 30px;
   }
   footer #dev {
     grid-row: 2;
+    width: 400px !important;
+    margin-left: 30px;
   }
   footer #dev4 {
     grid-row: 3;
+    width: 420px !important;
+    margin-left: 30px;
   }
   footer .dev {
     grid-row: 4;
-    width: 450px;
+    width: 420px !important;
+    margin-left: 30px;
   }
 
   footer .text-inicio {
