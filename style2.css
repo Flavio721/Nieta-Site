@@ -251,6 +251,9 @@ footer p {
 }
 
 @media screen and (max-width: 768px) {
+  html, body{
+    overflow-x: hidden;
+  }
   body {
     width: 100%;
     overflow-x: hidden;
@@ -258,7 +261,7 @@ footer p {
   }
   nav {
     justify-content: center;
-    width: 100vw;
+    width: 100%;
   }
   nav .titulo-menu{
     margin-right: 50px;
@@ -267,7 +270,7 @@ footer p {
     display: none;
   }
   main {
-    width: 100vw;
+    width: 100%;
   }
   .card{
     width: 80% !important;
@@ -280,11 +283,11 @@ footer p {
   }
   article {
     height: 1000px !important;
-    width: 100vw;
+    width: 100%;
   }
   .fases-game {
     height: 100px;
-    width: 100vw;
+    width: 100%;
     align-items: center;
   }
   .fases-game .carousel-fase {
@@ -294,7 +297,7 @@ footer p {
   }
   aside {
     background-color: #1f2937;
-    width: 100vw;
+    width: 100%;
   }
   .cutscene-nieta {
     display: none;
@@ -302,7 +305,7 @@ footer p {
   footer {
     height: 800px;
     padding-bottom: 1000px;
-    width: 100vw;
+    width: 100%;
     background-color: #344359;
   }
   footer .dev,
@@ -314,24 +317,22 @@ footer p {
   footer .dev1 {
     grid-row: 1;
     width: 400px !important;
-    margin-left: 30px;
+    margin: 0 auto;
   }
   footer #dev {
     grid-row: 2;
     width: 400px !important;
-    margin-left: 30px;
+    margin: 0 auto;
   }
   footer #dev4 {
     grid-row: 3;
     width: 400px !important;
-    margin-left: 30px;
-    background-color: red;
+    margin: 0 auto;
   }
   footer .dev {
     grid-row: 4;
     width: 420px !important;
-    margin-left: 30px;
-    background-color: orange;
+    margin: 0 auto;
   }
 
   footer .text-inicio {
