@@ -135,6 +135,10 @@ article {
   margin-left: 60px;
   margin-bottom: 50px;
 }
+.video-container video{
+  width: 100%;
+  height: auto;
+}
 .cutscene-nieta .text-left {
   width: 500px;
   color: white;
