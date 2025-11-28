@@ -120,7 +120,7 @@
       </article>
       <section class="fases-game">
         <h2 class="text-4xl font-bold mb-3">Fases do jogo</h2>
-        <div class="carousel-fase">
+        <div class="carousel-fase duration-300">
           <div
             id="carouselExample"
             class="carousel slide"
@@ -137,7 +137,7 @@
               </div>
               <div class="carousel-item">
                 <img
-                  src="imagem/fase2.png"
+                  src="imagem/Fase 2.png"
                   class="d-block"
                   alt="..."
                   height="300px"
@@ -518,6 +518,7 @@
             >
               Close
             </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
@@ -583,18 +584,26 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       // Pegamos o formulário de opinião do usuário pelo ID
+      localStorage.removeItem("qtdOpinioes");
       document
         .getElementById("formOpiniao")
         .addEventListener("submit", function (e) {
           // Garantimos que o formulário seja enviado em método POST
           e.preventDefault();
-
           const opiniao = document.getElementById("iopn").value; // Texto do usuario
           const status = document.getElementById("status"); // Mensagem de erro
-
+          const limiteEmail = 3;
+          
+          let qtdOpinioes = parseInt(localStorage.getItem("qtdOpinioes")) || 0;
+          
+          if(qtdOpinioes >= limiteEmail){
+            status.innerText = "Você excedeu o limite de emails enviados!";
+            status.style.color = "red";
+            return;
+          }
+          
           status.innerText = "Enviando opinião..."; // Enquanto ta enviando a msg fica assim
           status.style.color = "yellow";
           if (!opiniao) {
@@ -606,18 +615,22 @@
             to_email: "flavio2010sjcc@gmail.com", // Email q a opn vai chegar
           };
           emailjs
-            .send("service_hilnkgm", "template_0mdsx0q", templateParams) // Service_id, template_id e o obj com os dados
-            .then(
-              function (response) {
-                status.innerText = "Opinião enviada com sucesso!"; // A opn foi enviada
-                status.style.color = "green";
+          .send("service_hilnkgm", "template_0mdsx0q", templateParams) // Service_id, template_id e o obj com os dados
+          .then(
+            function (response) {
+              qtdOpinioes += 1;
+              localStorage.setItem("qtdOpinioes", qtdOpinioes);
+              status.innerText = "Opinião enviada com sucesso!"; // A opn foi enviada
+              status.style.color = "green";
+                console.log("Valor da variavel: " + qtdOpinioes);
+                console.log("Valor da chave: " + localStorage.getItem("qtdOpinioes"));
               },
               function (error) {
                 status.innerText = "Ocorreu um erro!"; // Algm erro no envio
                 console.error(error); // Envia a mensagem de erro ao console
               }
             );
-        });
-    </script>
+          });
+        </script>
   </body>
 </html>
