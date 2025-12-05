@@ -124,7 +124,7 @@
         formData.append("email", email);
         formData.append("senha", senha);
 
-        fetch("scripts/cadastro.php", {
+        fetch("https://servidor-nieta.42web.io/scripts/cadastro.php", {
           method: "POST",
           body: formData,
         })

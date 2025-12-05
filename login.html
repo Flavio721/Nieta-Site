@@ -105,7 +105,7 @@
         formLogin.append("email", email);
         formLogin.append("senha", senha);
         // envio para o php
-        fetch("scripts/login.php", {
+        fetch("https://servidor-nieta.42web.io/scripts/login.php", {
           method: "POST",
           body: formLogin,
         })
