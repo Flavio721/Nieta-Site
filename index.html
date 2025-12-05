@@ -586,7 +586,6 @@
     ></script>
     <script>
       // Pegamos o formulário de opinião do usuário pelo ID
-      localStorage.removeItem("qtdOpinioes");
       document
         .getElementById("formOpiniao")
         .addEventListener("submit", function (e) {
@@ -627,6 +626,7 @@
               },
               function (error) {
                 status.innerText = "Ocorreu um erro!"; // Algm erro no envio
+                status.style.color = 'red';
                 console.error(error); // Envia a mensagem de erro ao console
               }
             );
