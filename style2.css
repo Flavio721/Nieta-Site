@@ -70,7 +70,7 @@ nav .nav-link:hover {
   color: white;
   font-size: 1.3em;
 }
-article {
+.art-cards {
   background-color: #1f2937;
   display: flex;
   justify-content: center;
@@ -81,7 +81,7 @@ article {
   z-index: 5;
 }
 .card {
-  color: whitesmoke;
+  color: white;
   background-color: #394a63;
 }
 #btn {
@@ -285,8 +285,8 @@ footer p {
     justify-self: center;
     margin-left: 0px;
   }
-  article {
-    height: 1000px !important;
+  .art-cards {
+    height: 1100px !important;
     width: 100%;
   }
   .fases-game {

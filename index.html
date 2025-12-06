@@ -15,6 +15,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Inclui o Tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="scripts/index.js" defer></script>
     <script>
       (function () {
         emailjs.init("O82xk317ejttox0Nt");
@@ -48,9 +49,9 @@
       </a>
     </header>
     <main>
-      <article>
+      <article class="art-cards">
         <!-- Personagem 1 -->
-        <div class="card" style="width: 400px; height: 300px">
+        <div class="card" style="width: 400px; height: 300px;" id="card1">
           <div class="card-body flex items-center flex-col">
             <h5 class="card-title text-2xl font-bold text-center">Rei Arval</h5>
             <p class="card-text text-center">
@@ -71,7 +72,7 @@
           </div>
         </div>
         <!-- Personagem 2 -->
-        <div class="card" style="width: 400px; height: 300px">
+        <div class="card" style="width: 400px; height: 300px;" id="card2">
           <div class="card-body flex items-center flex-col">
             <h5 class="card-title text-2xl font-bold text-center">Agatha</h5>
             <p class="card-text text-center">
@@ -94,7 +95,7 @@
           </div>
         </div>
         <!-- Personagem 3 -->
-        <div class="card" style="width: 400px; height: 300px">
+        <div class="card" style="width: 400px; height: 300px;" id="card3">
           <div class="card-body flex items-center flex-col">
             <h5 class="card-title text-2xl font-bold text-center">Sr Rock</h5>
             <p class="card-text text-center">
@@ -584,6 +585,8 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script>
       // Pegamos o formulário de opinião do usuário pelo ID
       document
