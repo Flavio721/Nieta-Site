@@ -14,7 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 end: 'center bottom',
                 scrub: false,
                 pin: true,
-                markers: true,
                 toggleActions: 'play none none none'
             }
         });
