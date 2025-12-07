@@ -54,9 +54,9 @@ nav .nav-link:hover {
 }
 .topo {
   background-image: url(imagem/topo.png);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
   height: 650px;
   display: flex;
   justify-content: center;
@@ -95,12 +95,14 @@ nav .nav-link:hover {
   background-color: #394a63;
   height: 450px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
   color: white;
   font-weight: bold;
   z-index: 4;
+}
+.carousel-completo{
+  margin-left: 150px;
+  text-align: center;
+  margin-top: 50px;
 }
 .carousel-fase {
   height: 300px;
@@ -120,6 +122,29 @@ nav .nav-link:hover {
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
   background-color: rgba(0, 0, 0, 0.8); /* escurece no hover */
+}
+.text-fases{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  opacity:  0;
+  width: 70%;
+  margin-left: 150px;
+  margin-top: 140px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: opacity 0.2s ease;
+
+  &.active{
+    opacity: 1;
+  }
 }
 .cutscene-nieta {
   display: flex;
@@ -290,9 +315,31 @@ footer p {
     width: 100%;
   }
   .fases-game {
-    height: 100px;
+    height: 850px !important;
     width: 100%;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0;
+  }
+  .carousel-completo{
+    margin: 40px 0 0 0;
+  }
+  .text-fases{
+    margin: 0;
+    padding-bottom: 40px;
+    height: 400px;
+  }
+  .text{
+    margin: 0;
+    width: 90%;
+    margin-left: 20px;
+    h2{
+      font-size: 2em;
+    }
+    p{
+      font-size: 1em;
+      margin: 0;
+    }
   }
   .fases-game .carousel-fase {
     margin-right: 35px;
@@ -320,23 +367,31 @@ footer p {
   }
   footer .dev1 {
     grid-row: 1;
-    width: 400px !important;
-    margin: 0 auto;
+    width: 390px !important;
+    margin: 0 0 0 25px;
+    padding: 0;
   }
   footer #dev {
     grid-row: 2;
     width: 400px !important;
-    margin: 0 auto;
+    padding: 0;
+    margin: 0 0 0 20px;
   }
   footer #dev4 {
     grid-row: 3;
     width: 400px !important;
-    margin: 0 auto;
+    padding: 0;
+    margin: 0 0 0 20px;
   }
   footer .dev {
     grid-row: 4;
     width: 400px !important;
-    margin: 0 auto;
+    padding: 0;
+    margin: 0 0 0 20px;
+  }
+  .foto1, .foto2, .foto-pronta, .foto-pronta1{
+    width: 100%;
+    
   }
 
   footer .text-inicio {

@@ -1,10 +1,7 @@
 <?php
-header("Access-Control-Allow-Origin: https://site-nieta.vercel.app");
-header("Access-Control-Allow-Methods: POST");
-header("Access-Control-Allow-Headers: Content-Type");
-include_once('database.php');
+include_once('database.php'); // cria ligação com o database
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") { // verifica se o método é POST
     $email = $_POST['email'] ?? null;
     $senha = $_POST['senha'] ?? null;
 

@@ -105,38 +105,38 @@
   </body>
   <script>
     document
-      .getElementById("formLogin")
-      .addEventListener("submit", function (e) {
-        e.preventDefault();
+      .getElementById("formLogin") // id do formulario de login
+      .addEventListener("submit", function (e) { // só acontece quando o usuario enviar
+        e.preventDefault(); // evita um envio com erro (campos com valores diferentes)
 
-        const nome = document.getElementById("inome").value.trim();
-        const email = document.getElementById("iemail").value.trim();
-        const senha = document.getElementById("isenha").value.trim();
-        const status = document.getElementById("status");
+        const nome = document.getElementById("inome").value.trim(); // id do input do campo nome
+        const email = document.getElementById("iemail").value.trim(); // id do input do campo email
+        const senha = document.getElementById("isenha").value.trim(); // id do input do campo senha
+        const status = document.getElementById("status"); // mensagem de erro (opcional)
 
-        if (!nome || !email || !senha) {
-          alert("Preencha todos os campos");
+        if (!nome || !email || !senha) { // se algum campo estiver vazio irá retornar um alerta
+          alert("Preencha todos os campos"); 
           return;
         }
 
-        const formData = new FormData();
+        const formData = new FormData(); // cria um formdata e adiciona todas as configurações
         formData.append("nome", nome);
         formData.append("email", email);
         formData.append("senha", senha);
 
-        fetch("https://servidor-nieta.42web.io/scripts/cadastro.php", {
-          method: "POST",
-          body: formData,
+        fetch("scripts/cadastro.php", {
+          method: "POST", // metodo de envio (sempre post)
+          body: formData, // corpo do envio o formData
         })
-          .then((resposta) => resposta.text())
-          .then((text) => {
-            if (text.trim() === "Sucesso") {
-              alert("Cadastro efetuado, confirme seu email e senha");
-              window.location.href = "login.html";
+          .then((resposta) => resposta.text()) // transforma a resposta do PHP em texto
+          .then((text) => { 
+            if (text.trim() === "Sucesso") { // mesma mensagem que retornei no PHP
+              alert("Cadastro efetuado, confirme seu email e senha"); // emite um alerta de sucesso
+              window.location.href = "login.html"; // redireciona para a página login
             } else {
-              status.innerText = "Email ou senha já cadastrado";
+              status.innerText = "Email ou senha já cadastrado"; // mensagem de erro (opcional, pode usar alert)
               status.style.color = "red";
-              console.log("Erro: ", text);
+              console.log("Erro: ", text); // joga o erro no console (F12)
             }
           });
       });
