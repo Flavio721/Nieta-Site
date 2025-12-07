@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
         tl.to('#card1', {
             opacity: 1,
             scale: 1,
-            boxShadow: "0 0 25px rgba(255,255,255,0.15), 0 10px 25px rgba(0,0,0,0.5)",
+            boxShadow: "0 0 25px rgba(255,255,255,0.15), 0 10px 25px rgba(0,0,0,0.9)",
             duration: 0.3,
             ease: 'power3.out'
         });
@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
         tl.to('#card2', {
             opacity: 1,
             scale: 1,
-            boxShadow: "0 0 25px rgba(255,255,255,0.15), 0 10px 25px rgba(0,0,0,0.5)",
+            boxShadow: "0 0 25px rgba(255,255,255,0.15), 0 10px 25px rgba(0,0,0,0.9)",
             duration: 0.3,
             ease: 'power3.out'
         });
@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
         tl.to('#card3', {
             opacity: 1,
             scale: 1,
-            boxShadow: "0 0 25px rgba(255,255,255,0.15), 0 10px 25px rgba(0,0,0,0.5)",
+            boxShadow: "0 0 25px rgba(255,255,255,0.15), 0 10px 25px rgba(0,0,0,0.9)",
             duration: 0.3,
             ease: 'power3.out'
         });
