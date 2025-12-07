@@ -90,12 +90,15 @@ cards.forEach((card) => {
     card.addEventListener('mouseenter', () => {
             gsap.to(card, {
             border: '1px solid rgb(255, 123, 0)',
+            boxShadow: "0 0 25px rgba(255,255,255,0.15), 0 10px 25px rgba(0,0,0,0.9)",
+            opacity: 1.1,
             duration: 0.2,
             })
         })
         card.addEventListener('mouseleave', () => {
                 gsap.to('.card', {
                 border: '1px solid #394a63',
+                boxShadow: "0 0 25px rgba(255,255,255,0.15), 0 10px 25px rgba(0,0,0,0.5)",  
                 duration: 0.2,
                 })
             })
@@ -113,3 +116,15 @@ carouselFases.addEventListener('slide.bs.carousel', (e) => {
   texts.forEach(t => t.classList.remove('active'));
   texts[index].classList.add('active');
 });
+
+const container = document.querySelector('.pixel-particles');
+
+for (let i = 0; i < 25; i++) {
+  const sq = document.createElement('span');
+  sq.style.left = Math.random() * 100 + "%";
+  sq.style.top = Math.random() * 100 + "%";
+  sq.style.animationDelay = Math.random() * 4 + "s";
+  sq.style.opacity = (Math.random() * 0.5 + 0.2).toFixed(2);
+  container.appendChild(sq);
+}
+

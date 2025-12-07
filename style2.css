@@ -70,6 +70,27 @@ nav .nav-link:hover {
   color: white;
   font-size: 1.3em;
 }
+.btn-menu button:hover, .btn-menu:hover{
+  cursor: url('imagem/cursor-sword.png') 8 10, pointer;
+}
+.pixel-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1; 
+}
+.pixel-particles span {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgb(255, 123, 0); 
+  animation: subir 4s linear infinite;
+  border-radius: 2px; 
+}
 .art-cards {
   background-color: #1f2937;
   display: flex;
@@ -83,6 +104,7 @@ nav .nav-link:hover {
 .card {
   color: white;
   background-color: #394a63;
+  animation: brilhoPulse 2.5s ease-in-out infinite;
 }
 #btn {
   transition: 0.5s;
@@ -471,5 +493,32 @@ footer p {
   }
   footer {
     height: 1300px;
+  }
+}
+
+/* Keyframes */
+
+@keyframes brilhoPulse {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.1);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+@keyframes subir {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-80px) scale(0.6);
+    opacity: 0;
   }
 }
