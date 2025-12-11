@@ -221,7 +221,7 @@ footer p {
   grid-row: 2;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   height: 250px;
   width: 440px;
   padding: 5px;
@@ -232,7 +232,7 @@ footer p {
   background-color: #344359;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   height: 250px;
   width: 449px;
   padding: 5px;
@@ -243,7 +243,7 @@ footer p {
   background-color: #344359;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   height: 250px;
   width: 450px;
   padding: 5px;
@@ -255,7 +255,7 @@ footer p {
   background-color: #344359;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   height: 250px;
   width: 439px;
   padding: 5px;
@@ -411,11 +411,6 @@ footer p {
     padding: 0;
     margin: 0 0 0 20px;
   }
-  .foto1, .foto2, .foto-pronta, .foto-pronta1{
-    width: 100%;
-    
-  }
-
   footer .text-inicio {
     width: 400px;
   }
